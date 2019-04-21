@@ -29,6 +29,7 @@
   .tags {
     display: flex;
     list-style: none;
+    flex-wrap: wrap;
   }
 
   .tag {
@@ -42,6 +43,5 @@
 }
 
 .back {
-  font-style: italic;
   margin-top: 3rem;
 }

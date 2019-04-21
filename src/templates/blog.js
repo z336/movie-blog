@@ -53,7 +53,7 @@ const Blog = props => {
           </div>
         ) : null}
         <Link to="/">
-          <p className={styles.back}>Back</p>
+          <h3 className={styles.back}>Back</h3>
         </Link>
       </div>
     </Layout>
