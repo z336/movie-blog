@@ -6,15 +6,12 @@ description: Testing
 ---
 Hey [there](https://www.imdb.com/), this is my first [post](https://overreacted.io/) ya'll! 
 
-
-
-# really big text
-
-## less big text
-
 * list
 * list
+
+
 
 1. numbers
 2. numbers
-3. ![Alternate text](/img/someone.jpeg "Picture")
+
+![Alternate text](/img/someone.jpeg "Picture")
