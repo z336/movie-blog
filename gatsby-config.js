@@ -4,6 +4,7 @@ module.exports = {
     author: "Jon Coleman",
   },
   plugins: [
+    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {

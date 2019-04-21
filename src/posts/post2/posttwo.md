@@ -1,6 +1,7 @@
 ---
 title: "The Second Post"
 date: "2019-04-20"
+description: "Here's a description"
 ---
 
 Check this post out
