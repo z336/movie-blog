@@ -40,6 +40,7 @@ const Tags = ({ pageContext, data }) => {
       <Head title="Tagged Posts" />
       <div className={styles.posts}>
         <h1>{tagHeader}</h1>
+
         <ul>
           {edges.map(({ node }) => {
             const { slug } = node.fields
@@ -47,7 +48,7 @@ const Tags = ({ pageContext, data }) => {
 
             return (
               <li key={slug}>
-                <Link to={slug}>
+                <Link to={`/blog/${slug}`}>
                   <h2>{title}</h2>
                 </Link>
               </li>
