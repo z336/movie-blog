@@ -28,7 +28,7 @@ const IndexBlogPage = () => {
     <div>
       <Layout>
         <Head title="Home" />
-        <h1>Blog</h1>
+        <p>A brief description of what this page is all about.</p>
         <ol className={styles.posts}>
           {data.allMarkdownRemark.edges.map(edge => {
             return (

@@ -1,7 +1,8 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
+import styles from "./blog.module.scss"
 import Head from "../components/head"
 
 export const query = graphql`
@@ -11,6 +12,7 @@ export const query = graphql`
         title
         date(formatString: "MMMM Do, YYYY")
         description
+        author
       }
       html
     }
@@ -21,11 +23,19 @@ const Blog = props => {
   return (
     <Layout>
       <Head title={props.data.markdownRemark.frontmatter.title} />
-      <h1>{props.data.markdownRemark.frontmatter.title}</h1>
-      <p>{props.data.markdownRemark.frontmatter.date}</p>
-      <div
-        dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
-      />
+      <div className={styles.post}>
+        <h2>{props.data.markdownRemark.frontmatter.title}</h2>
+        <p className={styles.author}>
+          Posted by: {props.data.markdownRemark.frontmatter.author} on{" "}
+          {props.data.markdownRemark.frontmatter.date}
+        </p>
+        <div
+          dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
+        />
+        <Link to="/">
+          <p className={styles.back}>Back</p>
+        </Link>
+      </div>
     </Layout>
   )
 }
