@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import kebabCase from "lodash/kebabCase"
 
 import Layout from "../components/layout"
 import styles from "./blog.module.scss"
@@ -13,6 +14,7 @@ export const query = graphql`
         date(formatString: "MMMM Do, YYYY")
         description
         author
+        tags
       }
       html
     }
@@ -20,27 +22,37 @@ export const query = graphql`
 `
 
 const Blog = props => {
+  const data = props.data.markdownRemark.frontmatter
   return (
     <Layout>
       <Head
-        title={props.data.markdownRemark.frontmatter.title}
-        author={props.data.markdownRemark.frontmatter.author}
+        title={data.title}
+        author={data.author}
         meta
         name="description"
-        content={props.data.markdownRemark.frontmatter.description}
+        content={data.description}
       />
       <div className={styles.post}>
-        <h1>{props.data.markdownRemark.frontmatter.title}</h1>
+        <h1>{data.title}</h1>
         <p className={styles.author}>
-          Posted by{" "}
-          <Link to="/about">
-            {props.data.markdownRemark.frontmatter.author}
-          </Link>{" "}
-          on {props.data.markdownRemark.frontmatter.date}
+          Posted by <Link to="/about">{data.author}</Link> on {data.date}
         </p>
         <div
           dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
         />
+
+        {data.tags && data.tags.length ? (
+          <div>
+            <h2>Tags</h2>
+            <ul className={styles.tags}>
+              {data.tags.map(tag => (
+                <li key={tag + `tag`} className={styles.tag}>
+                  <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
         <Link to="/">
           <p className={styles.back}>Back</p>
         </Link>

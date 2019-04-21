@@ -3,6 +3,10 @@
     margin-bottom: 0.25rem;
   }
 
+  h2 {
+    margin-top: 5rem;
+  }
+
   a {
     color: #ff284d;
     font-size: 0.9rem;
@@ -20,6 +24,15 @@
 
   blockquote {
     font-style: italic;
+  }
+
+  .tags {
+    display: flex;
+    list-style: none;
+  }
+
+  .tag {
+    margin-right: 1.3rem;
   }
 }
 
