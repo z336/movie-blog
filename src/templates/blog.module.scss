@@ -4,18 +4,23 @@
   }
 
   a {
-    color: #999999;
+    color: #ff284d;
     font-size: 0.9rem;
     text-decoration: none;
   }
 
   a:hover {
-    color: #666666;
+    color: #cc203d;
+  }
+
+  p {
+    font-family: "IBM Plex Mono", monospace;
   }
 }
 
 .author {
   font-size: 0.8rem;
+  font-style: italic;
 }
 
 .back {

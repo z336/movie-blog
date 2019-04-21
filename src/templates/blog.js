@@ -26,8 +26,11 @@ const Blog = props => {
       <div className={styles.post}>
         <h2>{props.data.markdownRemark.frontmatter.title}</h2>
         <p className={styles.author}>
-          Posted by: {props.data.markdownRemark.frontmatter.author} on{" "}
-          {props.data.markdownRemark.frontmatter.date}
+          Posted by{" "}
+          <Link to="/about">
+            {props.data.markdownRemark.frontmatter.author}
+          </Link>{" "}
+          on {props.data.markdownRemark.frontmatter.date}
         </p>
         <div
           dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
