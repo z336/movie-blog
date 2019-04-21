@@ -1,4 +1,5 @@
 const path = require("path")
+const _ = require("lodash")
 
 module.exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
@@ -25,6 +26,9 @@ module.exports.createPages = async ({ graphql, actions }) => {
             fields {
               slug
             }
+            frontmatter {
+              tags
+            }
           }
         }
       }
@@ -34,8 +38,32 @@ module.exports.createPages = async ({ graphql, actions }) => {
     createPage({
       component: blogTemplate,
       path: `/blog/${edge.node.fields.slug}`,
+      tags: edge.node.frontmatter.tags,
       context: {
         slug: edge.node.fields.slug,
+      },
+    })
+  })
+  // Tag pages:
+  let tags = []
+  // Iterate through each post, putting all found tags into `tags`
+  res.data.allMarkdownRemark.edges.forEach(edge => {
+    if (_.get(edge, `node.frontmatter.tags`)) {
+      tags = tags.concat(edge.node.frontmatter.tags)
+    }
+  })
+  // Eliminate duplicate tags
+  tags = _.uniq(tags)
+
+  // Make tag pages
+  tags.forEach(tag => {
+    const tagPath = `/tags/${_.kebabCase(tag)}/`
+
+    createPage({
+      path: tagPath,
+      component: path.resolve(`src/templates/tags.js`),
+      context: {
+        tag,
       },
     })
   })
