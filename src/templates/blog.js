@@ -22,9 +22,15 @@ export const query = graphql`
 const Blog = props => {
   return (
     <Layout>
-      <Head title={props.data.markdownRemark.frontmatter.title} />
+      <Head
+        title={props.data.markdownRemark.frontmatter.title}
+        author={props.data.markdownRemark.frontmatter.author}
+        meta
+        name="description"
+        content={props.data.markdownRemark.frontmatter.description}
+      />
       <div className={styles.post}>
-        <h2>{props.data.markdownRemark.frontmatter.title}</h2>
+        <h1>{props.data.markdownRemark.frontmatter.title}</h1>
         <p className={styles.author}>
           Posted by{" "}
           <Link to="/about">
