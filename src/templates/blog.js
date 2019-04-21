@@ -10,6 +10,7 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "MMMM Do, YYYY")
+        description
       }
       html
     }
