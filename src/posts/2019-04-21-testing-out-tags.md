@@ -8,5 +8,10 @@ tags:
   - after
   - additional tag
   - gimme those tags
+  - more
+  - even more
+  - all tags
+  - too many tags
+  - just another tag
 ---
 Please find tags on this post.
