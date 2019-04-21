@@ -28,7 +28,7 @@ const IndexBlogPage = () => {
     <div>
       <Layout>
         <Head title="Home" />
-        <p className={styles.about}>
+        <p>
           A brief description of what this page is all about. A brief
           description of what this page is all about. A brief description of
           what this page is all about. A brief description of what this page is

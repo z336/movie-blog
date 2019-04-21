@@ -29,7 +29,7 @@ const Header = () => {
               className={styles.navItem}
               activeClassName={styles.activeNavItem}
             >
-              Home
+              Blog
             </Link>
           </li>
           <li>
