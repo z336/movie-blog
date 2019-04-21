@@ -29,10 +29,11 @@ const IndexBlogPage = () => {
       <Layout>
         <Head title="Home" />
         <p>
-          A brief description of what this page is all about. A brief
-          description of what this page is all about. A brief description of
-          what this page is all about. A brief description of what this page is
-          all about.
+          A brief description of what this page is all about. Lorem ipsum dolor
+          sit, amet consectetur adipisicing elit. Ex unde id voluptatum,
+          laudantium eaque deleniti dolore nam numquam itaque reiciendis impedit
+          pariatur, ad minus. Est laborum distinctio corporis consectetur
+          architecto.
         </p>
         <ol className={styles.posts}>
           {data.allMarkdownRemark.edges.map(edge => {
