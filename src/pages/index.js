@@ -28,7 +28,12 @@ const IndexBlogPage = () => {
     <div>
       <Layout>
         <Head title="Home" />
-        <p>A brief description of what this page is all about.</p>
+        <p className={styles.about}>
+          A brief description of what this page is all about. A brief
+          description of what this page is all about. A brief description of
+          what this page is all about. A brief description of what this page is
+          all about.
+        </p>
         <ol className={styles.posts}>
           {data.allMarkdownRemark.edges.map(edge => {
             return (
