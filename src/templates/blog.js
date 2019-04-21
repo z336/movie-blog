@@ -40,7 +40,6 @@ const Blog = props => {
         <div
           dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
         />
-
         {data.tags && data.tags.length ? (
           <div>
             <h2>Tags</h2>
