@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Site",
+    title: "Movies",
+    description: "A place to talk about film.",
     author: "Jon Coleman",
   },
   plugins: [
