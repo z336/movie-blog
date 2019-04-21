@@ -1,33 +1,49 @@
 import React from "react"
+import { Link, graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
+import styles from "./index.module.scss"
 import Head from "../components/head"
 
-const IndexPage = () => {
+const IndexBlogPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+        edges {
+          node {
+            frontmatter {
+              title
+              date(formatString: "MMMM Do, YYYY")
+            }
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
+
   return (
-    <Layout>
-      <Head title="Home" />
-      <h1>Gatsby Template</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ea illo
-        iusto nobis deleniti nulla expedita sequi unde. In nihil magni
-        aspernatur eaque perspiciatis voluptate voluptatibus ipsam adipisci
-        provident culpa!
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ea illo
-        iusto nobis deleniti nulla expedita sequi unde. In nihil magni
-        aspernatur eaque perspiciatis voluptate voluptatibus ipsam adipisci
-        provident culpa!
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ea illo
-        iusto nobis deleniti nulla expedita sequi unde. In nihil magni
-        aspernatur eaque perspiciatis voluptate voluptatibus ipsam adipisci
-        provident culpa!
-      </p>
-    </Layout>
+    <div>
+      <Layout>
+        <Head title="Home" />
+        <h1>Blog</h1>
+        <ol className={styles.posts}>
+          {data.allMarkdownRemark.edges.map(edge => {
+            return (
+              <li className={styles.post}>
+                <Link to={`/blog/${edge.node.fields.slug}`}>
+                  <h2>{edge.node.frontmatter.title}</h2>
+                  <p>{edge.node.frontmatter.date}</p>
+                </Link>
+              </li>
+            )
+          })}
+        </ol>
+      </Layout>
+    </div>
   )
 }
 
-export default IndexPage
+export default IndexBlogPage
