@@ -1,6 +1,6 @@
 import CMS from "netlify-cms"
 
-import "../styles/styles.scss"
+import "../styles/index.scss"
 import "../templates/blog.module.scss"
 
 CMS.registerPreviewStyle(file)
