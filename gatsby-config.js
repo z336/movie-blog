@@ -75,6 +75,7 @@ module.exports = {
         fonts: [
           {
             family: `IBM Plex Mono`,
+            family: `Heebo:900`,
           },
         ],
       },
