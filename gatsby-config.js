@@ -79,7 +79,7 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `IBM Plex Mono`,
+            family: `Merriweather`,
           },
           {
             family: `Heebo`,
