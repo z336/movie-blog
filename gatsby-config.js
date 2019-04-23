@@ -69,19 +69,5 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Merriweather`,
-          },
-          {
-            family: `Heebo`,
-            variants: [`400`, `900`],
-          },
-        ],
-      },
-    },
   ],
 }
