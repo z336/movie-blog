@@ -5,7 +5,6 @@ import Footer from "../components/footer"
 import "../styles/index.scss"
 import styles from "./layout.module.scss"
 import "typeface-merriweather"
-import "typeface-heebo"
 
 const Layout = props => {
   return (

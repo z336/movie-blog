@@ -33,12 +33,14 @@
 
   .tag {
     margin-right: 1.3rem;
-    font-family: "Heebo";
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 }
 
 .author {
   font-style: italic;
+  font-size: 0.9rem;
 }
 
 .back {
