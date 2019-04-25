@@ -4,7 +4,6 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import "../styles/index.scss"
 import styles from "./layout.module.scss"
-import "typeface-merriweather"
 
 const Layout = props => {
   return (
