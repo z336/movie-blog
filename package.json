@@ -23,7 +23,7 @@
     "gatsby-remark-external-links": "0.0.4",
     "gatsby-remark-images": "^3.0.11",
     "gatsby-remark-relative-images": "^0.2.2",
-    "gatsby-source-filesystem": "^2.0.31",
+    "gatsby-source-filesystem": "^2.0.32",
     "gatsby-transformer-remark": "^2.3.10",
     "netlify-cms": "^2.9.1",
     "node-sass": "^4.11.0",
