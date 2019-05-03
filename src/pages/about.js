@@ -8,7 +8,7 @@ const AboutPage = () => {
   return (
     <div>
       <Layout>
-        <Head title="About" />
+        <Head title="about" />
         <h1>About</h1>
         <p className={styles.about}>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex unde id

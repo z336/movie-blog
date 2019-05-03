@@ -27,7 +27,7 @@ const IndexBlogPage = () => {
   return (
     <div>
       <Layout>
-        <Head title="Home" />
+        <Head title="nothin good" />
         <p className={styles.description}>
           A brief description of what this page is all about. Lorem ipsum dolor
           sit, amet consectetur adipisicing elit. Ex unde id voluptatum,
