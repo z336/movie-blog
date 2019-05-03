@@ -29,7 +29,7 @@ const Header = () => {
               className={styles.navItem}
               activeClassName={styles.activeNavItem}
             >
-              Blog
+              blog
             </Link>
           </li>
           <li>
@@ -38,7 +38,7 @@ const Header = () => {
               className={styles.navItem}
               activeClassName={styles.activeNavItem}
             >
-              About
+              about
             </Link>
           </li>
         </ul>
