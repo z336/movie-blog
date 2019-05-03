@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Movies",
+    title: "nothin good",
     description: "A place to talk about film.",
     author: "Jon Coleman",
   },
