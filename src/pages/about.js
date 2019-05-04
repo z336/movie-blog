@@ -9,7 +9,7 @@ const AboutPage = () => {
     <div>
       <Layout>
         <Head title="about" />
-        <h1>About</h1>
+        <h2>Coye</h2>
         <p className={styles.about}>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex unde id
           voluptatum, laudantium eaque deleniti dolore nam numquam itaque
