@@ -11,7 +11,4 @@ Hey [there](https://www.imdb.com/), this is my first [post](https://overreacted.
 * list
 * list
 
-1. numbers
-2. numbers
-
 ![Alternate text](/img/someone.jpeg "Picture")
