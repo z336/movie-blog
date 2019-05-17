@@ -1,3 +1,11 @@
 .about {
   font-family: "Georgia", serif;
+  a {
+    color: #ff284d;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #cc203d;
+  }
 }
