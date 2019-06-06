@@ -4,7 +4,9 @@ author: Coye
 date: 2019-06-05T16:35:59.322Z
 description: Grad Progess
 tags:
-  - Blackness Whiteness Nativism
+  - Blackness
+  - Whiteness
+  - Nativism
 ---
 Coming to understand where Wilderson's head it at with my deeper dive in his book Red, White and Black: Cinema and the Structure of U.S Antagonisms...He's on to something. But I'm not here to give an evaluative opinion of this work. I'm here to read it and apply it to my greater needs and purposes, which is to graduate from OU with a masters in Film Studies LOL. But, real quick, cause I have A LOT of opinions, I will say this: This book is WILD. Now he's talmbout Native's Negrophobia as learned from their sovereign 'equals' the Settler.
 
