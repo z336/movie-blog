@@ -49,6 +49,33 @@ const AboutPage = () => {
           <Link to="/tags/">Metal</Link>, <Link to="/tags/">R&amp;B</Link>,{" "}
           <Link to="/tags/">Electronic</Link>
         </p>
+        <hr />
+        <h2>R.J. Wilson</h2>
+        <p className={styles.about}>
+          Hi I'm a filmmaker, editor, producer, and VHS hoarder based in
+          Portland, Maine. Since 2014, it's been my goal to “scare audiences in
+          60 seconds or less”. My website,{" "}
+          <a
+            href="http://www.rjwilsonhorror.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            www.rjwilsonhorror.com
+          </a>
+          , launched in early 2019, where you can watch my original horror
+          microshorts and stay up to date with productions and such. In my spare
+          time, I sometimes write film theory about horror movies, my
+          relationship to analog, and Satan. I also play guitar for Portland
+          thrashpunk and cokecore band,{" "}
+          <a
+            href="https://eyeballmaine.bandcamp.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Eyeball
+          </a>
+          .
+        </p>
       </Layout>
     </div>
   )
