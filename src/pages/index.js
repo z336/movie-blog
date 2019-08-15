@@ -14,6 +14,7 @@ const IndexBlogPage = () => {
             frontmatter {
               title
               date(formatString: "MMMM Do, YYYY")
+              author
             }
             fields {
               slug
@@ -40,7 +41,10 @@ const IndexBlogPage = () => {
               <li className={styles.post}>
                 <Link to={`/blog/${edge.node.fields.slug}`}>
                   <h2>{edge.node.frontmatter.title}</h2>
-                  <p>{edge.node.frontmatter.date}</p>
+                  <p>
+                    {edge.node.frontmatter.author} on{" "}
+                    {edge.node.frontmatter.date}
+                  </p>
                 </Link>
               </li>
             )
