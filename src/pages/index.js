@@ -41,11 +41,10 @@ const IndexBlogPage = () => {
               <li className={styles.post}>
                 <Link to={`/blog/${edge.node.fields.slug}`}>
                   <h2>{edge.node.frontmatter.title}</h2>
-                  <p>
-                    {edge.node.frontmatter.author} on{" "}
-                    {edge.node.frontmatter.date}
-                  </p>
                 </Link>
+                <p>
+                  {edge.node.frontmatter.author} on {edge.node.frontmatter.date}
+                </p>
               </li>
             )
           })}
