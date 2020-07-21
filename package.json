@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "gatsby": "^2.24.8",
-    "gatsby-awesome-pagination": "^0.3.6",
+    "gatsby-paginate": "^1.1.1",
     "gatsby-plugin-favicon": "^3.1.6",
     "gatsby-plugin-google-analytics": "^2.3.13",
     "gatsby-plugin-netlify-cms": "^3.0.18",
