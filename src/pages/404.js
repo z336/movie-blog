@@ -1,9 +1,9 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 
-import Layout from "../components/layout"
-import Head from "../components/head"
-import styles from "./404.module.scss"
+import Layout from "../components/layout";
+import Head from "../components/head";
+import styles from "./404.module.scss";
 
 const ErrorPage = () => {
   return (
@@ -18,7 +18,7 @@ const ErrorPage = () => {
         </p>
       </Layout>
     </div>
-  )
-}
+  );
+};
 
-export default ErrorPage
+export default ErrorPage;

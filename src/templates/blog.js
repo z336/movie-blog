@@ -1,10 +1,10 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import kebabCase from "lodash/kebabCase"
+import React from "react";
+import { Link, graphql } from "gatsby";
+import kebabCase from "lodash/kebabCase";
 
-import Layout from "../components/layout"
-import styles from "./blog.module.scss"
-import Head from "../components/head"
+import Layout from "../components/layout";
+import styles from "./blog.module.scss";
+import Head from "../components/head";
 
 export const query = graphql`
   query($slug: String!) {
@@ -19,10 +19,10 @@ export const query = graphql`
       html
     }
   }
-`
+`;
 
 const Blog = props => {
-  const data = props.data.markdownRemark.frontmatter
+  const data = props.data.markdownRemark.frontmatter;
   return (
     <Layout>
       <Head
@@ -57,7 +57,7 @@ const Blog = props => {
         </Link>
       </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default Blog
+export default Blog;

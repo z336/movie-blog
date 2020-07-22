@@ -1,9 +1,9 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 
-import Layout from "../components/layout"
-import styles from "./about.module.scss"
-import Head from "../components/head"
+import Layout from "../components/layout";
+import styles from "./about.module.scss";
+import Head from "../components/head";
 
 const AboutPage = () => {
   return (
@@ -78,7 +78,7 @@ const AboutPage = () => {
         </p>
       </Layout>
     </div>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;

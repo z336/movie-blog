@@ -1,9 +1,9 @@
-import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import React from "react";
+import { Link, graphql, useStaticQuery } from "gatsby";
 
-import Layout from "../components/layout"
-import styles from "./index.module.scss"
-import Head from "../components/head"
+import Layout from "../components/layout";
+import styles from "./index.module.scss";
+import Head from "../components/head";
 
 const IndexBlogPage = () => {
   const data = useStaticQuery(graphql`
@@ -23,7 +23,7 @@ const IndexBlogPage = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <div>
@@ -46,12 +46,12 @@ const IndexBlogPage = () => {
                   {edge.node.frontmatter.author} on {edge.node.frontmatter.date}
                 </p>
               </li>
-            )
+            );
           })}
         </ol>
       </Layout>
     </div>
-  )
-}
+  );
+};
 
-export default IndexBlogPage
+export default IndexBlogPage;

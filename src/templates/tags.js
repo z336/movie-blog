@@ -1,9 +1,9 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from "react";
+import { Link, graphql } from "gatsby";
 
-import Layout from "../components/layout"
-import Head from "../components/head"
-import styles from "./tags.module.scss"
+import Layout from "../components/layout";
+import Head from "../components/head";
+import styles from "./tags.module.scss";
 
 export const pageQuery = graphql`
   query($tag: String) {
@@ -26,14 +26,14 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
 const Tags = ({ pageContext, data }) => {
-  const { tag } = pageContext
-  const { edges, totalCount } = data.allMarkdownRemark
+  const { tag } = pageContext;
+  const { edges, totalCount } = data.allMarkdownRemark;
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? "" : "s"
-  } tagged with "${tag}"`
+  } tagged with "${tag}"`;
 
   return (
     <Layout>
@@ -43,8 +43,8 @@ const Tags = ({ pageContext, data }) => {
 
         <ul>
           {edges.map(({ node }) => {
-            const { slug } = node.fields
-            const { title } = node.frontmatter
+            const { slug } = node.fields;
+            const { title } = node.frontmatter;
 
             return (
               <li key={slug} className={styles.red}>
@@ -52,7 +52,7 @@ const Tags = ({ pageContext, data }) => {
                   <h2>{title}</h2>
                 </Link>
               </li>
-            )
+            );
           })}
         </ul>
         <Link to="/tags" className={styles.all}>
@@ -60,7 +60,7 @@ const Tags = ({ pageContext, data }) => {
         </Link>
       </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default Tags
+export default Tags;

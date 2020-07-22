@@ -1,10 +1,10 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import kebabCase from "lodash/kebabCase"
+import React from "react";
+import { Link, graphql } from "gatsby";
+import kebabCase from "lodash/kebabCase";
 
-import Layout from "../components/layout"
-import styles from "./tags.module.scss"
-import Head from "../components/head"
+import Layout from "../components/layout";
+import styles from "./tags.module.scss";
+import Head from "../components/head";
 
 export const pageQuery = graphql`
   query {
@@ -15,7 +15,7 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
 const TagsPage = ({
   data: {
@@ -39,6 +39,6 @@ const TagsPage = ({
       </div>
     </div>
   </Layout>
-)
+);
 
-export default TagsPage
+export default TagsPage;
